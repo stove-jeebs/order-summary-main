@@ -1,0 +1,168 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+    code begins here
+*/
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+body {
+	font-size: 16px;
+    background-color: hsl(225, 100%, 94%);
+	color: hsl(224, 23%, 55%);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.panel {
+	width: 100%;
+	max-width: 330px;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	border-radius: 15px;
+}
+
+.illustration {
+	width: 100%;
+	border-radius: 15px 15px 0 0;
+}
+
+.heading {
+	font-size: 21px;
+	font-weight: 900;
+	color: hsl(223, 47%, 23%);
+	margin: 30px 0 20px;
+}
+
+.paragraph {
+	line-height: 1.5;
+	margin-bottom: 20px;
+	width: 90%;
+}
+
+.plan {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: hsl(225, 100%, 98%);
+	width: 85%;
+	border-radius: 7px;
+	margin-bottom: 20px;
+}
+
+.annual-plan {
+	display: flex;
+	flex-direction: column;
+}
+
+.annual-plan.title {
+	margin-top: 20px;
+	color: hsl(223, 47%, 23%);
+	font-weight: 900;
+}
+
+.change-plan:hover {
+	color: #766cf1;
+}
+
+.button {
+	background-color: hsl(245, 75%, 52%);
+	color: white;
+	padding: 15px 20%;
+	border-radius: 7px;
+	text-decoration: none;
+	margin-bottom: 20px;
+	box-shadow: 0 15px 15px -2px hsla(245, 75%, 52%, 0.24);
+}
+
+.button:active, .button:hover {
+	background-color: #766cf1;
+}
+
+.cancel {
+	text-decoration: none;
+	color: inherit;
+	margin: 10px 0 30px;
+	font-weight: 700;
+}
+
+.cancel:active, .cancel:hover {
+	color: hsl(223, 47%, 23%);
+}
+
+@media (min-width: 375px) {
+	html {
+		background: top / contain no-repeat url(images/pattern-background-desktop.svg);
+	}
+
+	body {
+		background-color: hsla(225, 100%, 94%, 0.753);
+	}
+
+	.button, .cancel, .change-plan {
+		transition: 100ms ease-in-out;
+	}
+}
